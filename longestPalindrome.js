@@ -3,12 +3,14 @@ var practice = function(str) {
     let longest = '';
     for (let j = arr.length; j >= 0; j --) {
        for (let i = 0; i <= arr.length; i ++) {
-           if ( str.substr(i, j) === str.substr(i,j).split('').reverse().join('') &&  str.substr(i,j).length > longest.length) {
-               longest = str.substr(i,j)
+           if ( str.substr(i, j) === str.substr(i,j).split('').reverse().join('')
+           &&  str.substr(i,j).length > longest.length) {
+               longest = str.substr(i,j);
+               return;
            }
        }
     }
     return longest;
 };
 
-practice('dracecareflbcb')
+practice('racecar')
